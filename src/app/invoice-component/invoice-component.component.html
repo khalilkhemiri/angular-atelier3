@@ -1,0 +1,13 @@
+<div *ngIf="invoice && invoice.active">
+    <p>ID: {{ invoice.idFacture }}</p>
+    <p>Montant: {{ invoice.montantFacture }}</p>
+    <p>Montant Remise: {{ invoice.montantRemise }}</p>
+    <p>Date: {{ invoice.dateFacture }}</p>
+    <button (click)="retour()">Retour</button>
+
+  </div>
+  <div *ngIf="invoice && !invoice.active">
+    <p>Impossible de visualiser les détails de la facture.</p>
+    <button (click)="retour()">Retour</button>
+  </div>
+  
